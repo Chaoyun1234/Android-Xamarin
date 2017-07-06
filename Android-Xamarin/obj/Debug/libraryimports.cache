@@ -5,6 +5,7 @@
     <ManifestDocument>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Android.Bindings\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute.Android.Bindings\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Push.Android.Bindings\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Android.Support.Core.Utils\library_project_imports\AndroidManifest.xml</ManifestDocument>
@@ -25,6 +26,7 @@
     <Jar>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Android.Bindings\library_project_imports\bin\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings\library_project_imports\bin\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute.Android.Bindings\library_project_imports\bin\classes.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Push.Android.Bindings\library_project_imports\bin\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Xamarin.Android.Support.Core.Utils\library_project_imports\classes.jar</Jar>

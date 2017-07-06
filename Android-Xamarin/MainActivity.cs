@@ -46,8 +46,6 @@ namespace Android_Xamarin
                 System.Diagnostics.Debug.WriteLine(summary);
             };
             // 绑定 Click 事件
-           
-
             
             Analytics.TrackEvent("Click");
 
@@ -69,8 +67,8 @@ namespace Android_Xamarin
                 if (count > 5)
                 {
                     Crashes.Enabled = true;
-                    throw new System.Exception("error:click>5");
-                    //Crashes.GenerateTestCrash();
+                    //throw new System.Exception("error:click>5");
+                    Crashes.GenerateTestCrash();
                 }
 
                 // Toast 通知
