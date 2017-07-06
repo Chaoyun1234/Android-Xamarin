@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Analytics.Android.Bindings\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Analytics\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Android.Bindings\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute.Android.Bindings\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Xamarin.GooglePlayServices.Basement\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Analytics.Android.Bindings\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Analytics\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Android.Bindings\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute.Android.Bindings\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Analytics.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Analytics.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Distribute.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\__library_projects__\Xamarin.GooglePlayServices.Basement.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>
