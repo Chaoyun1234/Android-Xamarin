@@ -7,6 +7,7 @@ using Microsoft.Azure.Mobile.Crashes;
 using Microsoft.Azure.Mobile.Distribute;
 using Microsoft.Azure.Mobile.Push;
 using Firebase;
+using System.Text;
 
 namespace Android_Xamarin
 {
@@ -20,7 +21,7 @@ namespace Android_Xamarin
             FirebaseApp.InitializeApp(ApplicationContext);
             MobileCenter.LogLevel = LogLevel.Verbose;
             Push.Enabled = true;
-            MobileCenter.Start("7462b81e-72c5-4272-bf9c-2a62c4a16f84",
+            MobileCenter.Start("6cbf7b34-b41b-4f07-8dbd-855ba5f2bbf9",
                    typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
             var installid = MobileCenter.InstallId;
             
@@ -45,12 +46,46 @@ namespace Android_Xamarin
                 // Send the notification summary to debug output
                 System.Diagnostics.Debug.WriteLine(summary);
             };
+
             // 绑定 Click 事件
             
             Analytics.TrackEvent("Click");
 
-            // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
+            //Attachment code
+            Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
+            {
+                // Check the report in here and return true or false depending on the ErrorReport.
+                return false;
+            };
+            Crashes.ShouldAwaitUserConfirmation = () =>
+            {
+                // Build your own UI to ask for user consent here. SDK does not provide one by default.
+
+                // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+                return false;
+            };
+            Crashes.GetErrorAttachments = (ErrorReport report) =>
+            {
+                // Your code goes here.
+                return new ErrorAttachmentLog[]
+                {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+                };
+            };
+            Crashes.SendingErrorReport += (sender, e) =>
+            {
+                // Your code, e.g. to present a custom UI.
+            };
+            Crashes.SentErrorReport += (sender, e) =>
+            {
+                // Your code, e.g. to hide the custom UI.
+            };
+            Crashes.FailedToSendErrorReport += (sender, e) =>
+            {
+                // Your code goes here.
+            };
+
 
             base.OnCreate(bundle);
             // 加载布局

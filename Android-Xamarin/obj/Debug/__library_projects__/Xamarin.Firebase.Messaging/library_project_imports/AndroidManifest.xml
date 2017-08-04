@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.firebase.messaging">
-    <uses-sdk android:minSdkVersion="9"/>
+    <uses-sdk android:minSdkVersion="14" />
 
     <application>
 
@@ -22,7 +22,7 @@
              no need for explicit permissions despite exported="true" -->
         <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
             <intent-filter android:priority="-500">
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
