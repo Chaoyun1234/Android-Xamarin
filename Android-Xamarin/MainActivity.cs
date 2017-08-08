@@ -21,7 +21,8 @@ namespace Android_Xamarin
             FirebaseApp.InitializeApp(ApplicationContext);
             MobileCenter.LogLevel = LogLevel.Verbose;
             Push.Enabled = true;
-            MobileCenter.Start("6cbf7b34-b41b-4f07-8dbd-855ba5f2bbf9",
+            MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+            MobileCenter.Start("71941100-55de-46ab-be2f-7c7497380348",
                    typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
             var installid = MobileCenter.InstallId;
             

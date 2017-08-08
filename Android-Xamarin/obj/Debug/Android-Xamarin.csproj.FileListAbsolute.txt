@@ -118,3 +118,4 @@ C:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\XbdMerg
 C:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\XbdMerge\Xamarin.Firebase.Analytics.dll.stamp
 C:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\XbdMerge\Xamarin.Firebase.Messaging.dll.stamp
 C:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\bin\Debug\Xamarin.Android.Support.Annotations.dll
+C:\Users\v-chaodo\Source\Repos\Android-Xamarin\Android-Xamarin\obj\Debug\ProcessGoogleServicesJson.stamp
