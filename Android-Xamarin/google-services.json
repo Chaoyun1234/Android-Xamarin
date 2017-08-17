@@ -1,27 +1,71 @@
 {
   "project_info": {
-    "project_number": "137443022747",
-    "firebase_url": "https://android-xamarin-f4640.firebaseio.com",
-    "project_id": "android-xamarin-f4640",
-    "storage_bucket": "android-xamarin-f4640.appspot.com"
+    "project_number": "487980808381",
+    "firebase_url": "https://manifest-pulsar-169809.firebaseio.com",
+    "project_id": "manifest-pulsar-169809",
+    "storage_bucket": "manifest-pulsar-169809.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:137443022747:android:d9ebb734bac8903e",
+        "mobilesdk_app_id": "1:487980808381:android:d57b27f76c3f704d",
+        "android_client_info": {
+          "package_name": "com.reactdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487980808381-l66dccrcm1f63lg498vo03e5q9e4qq21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reactdemo",
+            "certificate_hash": "6fa16deb3243843d3d92f50ff944c785eb9b74d6"
+          }
+        },
+        {
+          "client_id": "487980808381-i3oge16p9ofeup851aos96fu9r8ud735.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTdBIOFtsWeXNrgCFnUWL7l9mXCUkv8kg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487980808381-i3oge16p9ofeup851aos96fu9r8ud735.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487980808381:android:d9ebb734bac8903e",
         "android_client_info": {
           "package_name": "Android_Xamarin.Android_Xamarin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "137443022747-kkffocrq4s8lj2rja76r4qvpfstk62s3.apps.googleusercontent.com",
+          "client_id": "487980808381-i3oge16p9ofeup851aos96fu9r8ud735.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyACHJOlwj2bcZpKIFc1v_7AZKt1RanhAjs"
+          "current_key": "AIzaSyBTdBIOFtsWeXNrgCFnUWL7l9mXCUkv8kg"
         }
       ],
       "services": {

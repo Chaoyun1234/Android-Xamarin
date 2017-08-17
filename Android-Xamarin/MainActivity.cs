@@ -7,6 +7,7 @@ using Microsoft.Azure.Mobile.Crashes;
 using Microsoft.Azure.Mobile.Distribute;
 using Microsoft.Azure.Mobile.Push;
 using Firebase;
+using System.Text;
 
 namespace Android_Xamarin
 {
@@ -20,7 +21,8 @@ namespace Android_Xamarin
             FirebaseApp.InitializeApp(ApplicationContext);
             MobileCenter.LogLevel = LogLevel.Verbose;
             Push.Enabled = true;
-            MobileCenter.Start("7462b81e-72c5-4272-bf9c-2a62c4a16f84",
+            //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+            MobileCenter.Start("64f8216f-7296-48c2-b487-8a9341e24abb",
                    typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
             var installid = MobileCenter.InstallId;
             
@@ -48,6 +50,41 @@ namespace Android_Xamarin
             // 绑定 Click 事件
             
             Analytics.TrackEvent("Click");
+            Analytics.TrackEvent("FindViewById");
+            //Attachment code
+            Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
+            {
+                // Check the report in here and return true or false depending on the ErrorReport.
+                return false;
+            };
+            Crashes.ShouldAwaitUserConfirmation = () =>
+            {
+                // Build your own UI to ask for user consent here. SDK does not provide one by default.
+
+                // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+                return false;
+            };
+            Crashes.GetErrorAttachments = (ErrorReport report) =>
+            {
+                // Your code goes here.
+                return new ErrorAttachmentLog[]
+                {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+                };
+            };
+            Crashes.SendingErrorReport += (sender, e) =>
+            {
+                // Your code, e.g. to present a custom UI.
+            };
+            Crashes.SentErrorReport += (sender, e) =>
+            {
+                // Your code, e.g. to hide the custom UI.
+            };
+            Crashes.FailedToSendErrorReport += (sender, e) =>
+            {
+                // Your code goes here.
+            };
 
             // Set our view from the "main" layout resource
             // SetContentView (Resource.Layout.Main);
@@ -60,6 +97,7 @@ namespace Android_Xamarin
             TextView show = FindViewById<TextView>(Resource.Id.showHello);
             say.Click += (sender, e) =>
             {
+                Analytics.TrackEvent("Crashes");
                 count++;
                 show.Text = "Hello, Android";
                 say.Text = $"You Clicked {count}";
