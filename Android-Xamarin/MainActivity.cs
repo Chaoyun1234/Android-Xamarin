@@ -1,11 +1,11 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Analytics;
-using Microsoft.Azure.Mobile.Crashes;
-using Microsoft.Azure.Mobile.Distribute;
-using Microsoft.Azure.Mobile.Push;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
+using Microsoft.AppCenter.Push;
 using Firebase;
 using System.Text;
 
@@ -19,12 +19,12 @@ namespace Android_Xamarin
         protected override void OnCreate(Bundle bundle)
         {
             FirebaseApp.InitializeApp(ApplicationContext);
-            MobileCenter.LogLevel = LogLevel.Verbose;
-            Push.Enabled = true;
-            //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
-            MobileCenter.Start("64f8216f-7296-48c2-b487-8a9341e24abb",
+            AppCenter.LogLevel = LogLevel.Verbose;
+            //Push.Enabled = true;
+            //AppCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+            AppCenter.Start("7a12598c-4d6c-4a57-ab31-7936acd83503",
                    typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
-            var installid = MobileCenter.InstallId;
+          // var installid = AppCenter.InstallI;
             
             Push.PushNotificationReceived += (sender, e) => {
                 
@@ -104,7 +104,7 @@ namespace Android_Xamarin
 
                 if (count > 5)
                 {
-                    Crashes.Enabled = true;
+                    //Crashes.Enabled = true;
                     //throw new System.Exception("error:click>5");
                     Crashes.GenerateTestCrash();
                 }

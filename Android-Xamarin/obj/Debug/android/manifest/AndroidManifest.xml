@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Android_Xamarin.Android_Xamarin" android:versionName="2.0" android:installLocation="auto" android:versionCode="2">
-  <!--suppress UsesMinSdkAttributes-->
-  <uses-sdk android:minSdkVersion="16" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Android_Xamarin.Android_Xamarin" android:installLocation="auto" android:versionName="2.0" android:versionCode="2">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="19" />
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="Android_Xamarin" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
@@ -26,6 +25,30 @@
         <category android:name="mono.android.intent.category.SEPPUKU.Android_Xamarin.Android_Xamarin" />
       </intent-filter>
     </receiver>
+    <activity android:name="com.microsoft.appcenter.distribute.DeepLinkActivity" android:theme="@android:style/Theme.NoDisplay">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:host="updates" android:path="/" android:scheme="appcenter" />
+      </intent-filter>
+    </activity>
+    <receiver android:name="com.microsoft.appcenter.distribute.DownloadManagerReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+        <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+      </intent-filter>
+    </receiver>
+    <service android:name="com.microsoft.appcenter.push.TokenService" p6:ignore="ExportedService" xmlns:p6="http://schemas.android.com/tools">
+      <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+      </intent-filter>
+    </service>
+    <service android:name="com.microsoft.appcenter.push.PushMessagingService" p6:ignore="ExportedService" xmlns:p6="http://schemas.android.com/tools">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
     <activity android:name="com.microsoft.azure.mobile.distribute.DeepLinkActivity" android:theme="@android:style/Theme.NoDisplay">
       <intent-filter>
         <action android:name="android.intent.action.VIEW" />

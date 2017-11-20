@@ -52,6 +52,37 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:487980808381:android:1171a921630a6888",
+        "android_client_info": {
+          "package_name": "com.example.v_chaodo.android_java"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487980808381-i3oge16p9ofeup851aos96fu9r8ud735.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTdBIOFtsWeXNrgCFnUWL7l9mXCUkv8kg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:487980808381:android:d9ebb734bac8903e",
         "android_client_info": {
           "package_name": "Android_Xamarin.Android_Xamarin"

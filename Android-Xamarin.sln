@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26531.1
+VisualStudioVersion = 15.0.26728.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android-Xamarin", "Android-Xamarin\Android-Xamarin.csproj", "{7534640F-2947-4955-BB4D-E1E8EEA78223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITest1", "UITest1\UITest1.csproj", "{6F8AAE9A-F7E3-4495-917B-7939C28565CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +19,15 @@ Global
 		{7534640F-2947-4955-BB4D-E1E8EEA78223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7534640F-2947-4955-BB4D-E1E8EEA78223}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7534640F-2947-4955-BB4D-E1E8EEA78223}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6F8AAE9A-F7E3-4495-917B-7939C28565CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8AAE9A-F7E3-4495-917B-7939C28565CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8AAE9A-F7E3-4495-917B-7939C28565CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8AAE9A-F7E3-4495-917B-7939C28565CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {146D749E-F8A8-4AED-ADDD-6C96E641C71A}
 	EndGlobalSection
 EndGlobal
