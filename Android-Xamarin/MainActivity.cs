@@ -15,23 +15,24 @@ namespace Android_Xamarin
     public class MainActivity : Activity
     {
         int count = 0;
-        
+       
         protected override void OnCreate(Bundle bundle)
         {
             FirebaseApp.InitializeApp(ApplicationContext);
             AppCenter.LogLevel = LogLevel.Verbose;
             //Push.Enabled = true;
             //AppCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
-            AppCenter.Start("7a12598c-4d6c-4a57-ab31-7936acd83503",
+            AppCenter.Start("f6788885-ef9a-4390-badb-037164833c4d",
                    typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
-          // var installid = AppCenter.InstallI;
-            
+            //var installid = AppCenter.InstallID;
+            ////////////////////////////////////////////////////////////////////
+            // This should come before AppCenter.Start() is called
             Push.PushNotificationReceived += (sender, e) => {
-                
+
                 // Add the notification message and title to the message
                 var summary = $"Push notification received:" +
-                        $"\n\tNotification title: {e.Title}" +
-                        $"\n\tMessage: {e.Message}";
+                                    $"\n\tNotification title: {e.Title}" +
+                                    $"\n\tMessage: {e.Message}";
 
                 // If there is custom data associated with the notification,
                 // print the entries
@@ -48,22 +49,31 @@ namespace Android_Xamarin
                 System.Diagnostics.Debug.WriteLine(summary);
             };
             // 绑定 Click 事件
-            
+
             Analytics.TrackEvent("Click");
             Analytics.TrackEvent("FindViewById");
             //Attachment code
-            Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
-            {
-                // Check the report in here and return true or false depending on the ErrorReport.
-                return false;
-            };
             Crashes.ShouldAwaitUserConfirmation = () =>
             {
-                // Build your own UI to ask for user consent here. SDK does not provide one by default.
-
-                // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
-                return false;
+                var builder = new AlertDialog.Builder(this);
+                builder.SetTitle("Crash detected. Send anonymous crash report?")
+               .SetNegativeButton("send", (s, e) =>
+               {
+                   Crashes.NotifyUserConfirmation(UserConfirmation.Send);
+               })
+                .SetPositiveButton("Always Send", (s, e) =>
+                {
+                    Crashes.NotifyUserConfirmation(UserConfirmation.AlwaysSend);
+                })
+                .SetNeutralButton("Don't Send", (s, e) =>
+                {
+                    Crashes.NotifyUserConfirmation(UserConfirmation.DontSend);
+                });
+                AlertDialog alertDialog = builder.Create();
+                alertDialog.Show();
+                return true;
             };
+            //////////////////////////////////////////////////////////////////////
             Crashes.GetErrorAttachments = (ErrorReport report) =>
             {
                 // Your code goes here.
@@ -75,20 +85,18 @@ namespace Android_Xamarin
             };
             Crashes.SendingErrorReport += (sender, e) =>
             {
-                // Your code, e.g. to present a custom UI.
+                Toast.MakeText(this, $"senting crash report", ToastLength.Short).Show();
             };
             Crashes.SentErrorReport += (sender, e) =>
             {
-                // Your code, e.g. to hide the custom UI.
+                AppCenterLog.Info("AppCenterXamarin--MonkeysApp", "sent error report successfully");
+                Toast.MakeText(this, $"sent crash report successfully", ToastLength.Short).Show();
             };
             Crashes.FailedToSendErrorReport += (sender, e) =>
             {
-                // Your code goes here.
+                Toast.MakeText(this, $"failed to send a crash log", ToastLength.Short).Show();
             };
-
-            // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
-
+            //////////////////////////////////////////////////////////////////
             base.OnCreate(bundle);
             // 加载布局
             SetContentView(Resource.Layout.Main);

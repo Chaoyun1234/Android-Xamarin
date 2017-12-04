@@ -112,16 +112,16 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.Compat.dll",
 		"Xamarin.Android.Support.Core.UI.dll",
 		"Xamarin.Android.Support.Core.Utils.dll",
-		"Xamarin.Android.Support.Media.Compat.dll",
 		"Xamarin.Android.Support.Fragment.dll",
+		"Xamarin.Android.Support.Media.Compat.dll",
 		"Xamarin.Android.Support.v4.dll",
-		"Xamarin.GooglePlayServices.Basement.dll",
-		"Xamarin.GooglePlayServices.Tasks.dll",
+		"Xamarin.Firebase.Analytics.dll",
+		"Xamarin.Firebase.Analytics.Impl.dll",
 		"Xamarin.Firebase.Common.dll",
 		"Xamarin.Firebase.Iid.dll",
-		"Xamarin.Firebase.Analytics.Impl.dll",
-		"Xamarin.Firebase.Analytics.dll",
 		"Xamarin.Firebase.Messaging.dll",
+		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Tasks.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
