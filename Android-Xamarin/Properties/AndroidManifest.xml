@@ -15,5 +15,6 @@ android:permission="com.google.android.c2dm.permission.SEND">
 <category android:name="${applicationId}" />
 </intent-filter>
 </receiver>
+  
 	</application>
 </manifest>

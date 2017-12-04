@@ -3,6 +3,12 @@
   <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="19" />
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="Android_Xamarin" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false" />
+    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true">
+      <intent-filter>
+        <action android:name="com.google.android.gms.measurement.UPLOAD" />
+      </intent-filter>
+    </receiver>
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
       <intent-filter>
